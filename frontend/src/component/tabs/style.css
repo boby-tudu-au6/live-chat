@@ -1,0 +1,6 @@
+.scrollview{
+    height: auto;
+    max-height: 500px;
+    background-color: #ECECEC;
+    overflow-y: scroll;
+}

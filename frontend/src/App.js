@@ -1,0 +1,26 @@
+import React, { useState } from 'react';
+import { Switch,Route } from 'react-router-dom';
+import { connect } from 'react-redux'
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
+import Nav from './component/Nav'
+import Home from './component/Home'
+import Login from './component/Login'
+import Spinner from './component/Spinner'
+
+const App = ({loading}) => {
+
+  return (
+    <div>
+      <Spinner data={loading} />
+       <Nav />
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route exact path='/login' component={Login} />
+        </Switch>
+    </div>
+  );
+}
+
+export default connect(state=>{return {...state}})(App);
